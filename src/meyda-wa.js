@@ -5,12 +5,12 @@ export class MeydaAnalyzer{
 	constructor(options, _this) {
   this._m = _this;
   if (!options.audioContext)
-  throw self._errors.noAC;
+  throw this._m._errors.noAC;
   else if (options.bufferSize &&
         !utilities.isPowerOfTwo(options.bufferSize))
-  throw self._errors.notPow2;
+  throw this._m._errors.notPow2;
   else if (!options.source)
-  throw self._errors.noSource;
+  throw this._m._errors.noSource;
 
   this._m.audioContext = options.audioContext;
 
